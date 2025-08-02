@@ -36,7 +36,7 @@ The goal of this project was to fetch real-time country data and present it in a
 
 ## 🔗 Live Demo
 
-- **Live Website:** [http://127.0.0.1:5500/project_5/Country_part_1/Country_part_2/index.html]([https://your-live-site-url.com](http://127.0.0.1:5500/project_5/Country_part_1/Country_part_2/index.html))
+- **Live Website:** [http://127.0.0.1:5500/project_5/Country_part_1/Country_part_2/index.html](http://127.0.0.1:5500/project_5/Country_part_1/Country_part_2/index.html)
 - **GitHub Repo:** [https://github.com/sohammorchapure/find-your-country](https://github.com/sohammorchapure/find-your-country)
 
 ---
