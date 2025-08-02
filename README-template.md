@@ -1,6 +1,6 @@
 # Frontend Mentor - REST Countries API with color theme switcher solution
 
-This is a solution to the [REST Countries API with color theme switcher challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/rest-countries-api-with-color-theme-switcher-5cacc469fec04111f7b848ca). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
+This is a solution to the [REST Countries API with color theme switcher challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/rest-countries-api-with-color-theme-switcher-5cacc469fec04111f7b848ca). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
 ## Table of contents
 
@@ -16,100 +16,94 @@ This is a solution to the [REST Countries API with color theme switcher challeng
 - [Author](#author)
 - [Acknowledgments](#acknowledgments)
 
-**Note: Delete this note and update the table of contents based on what sections you keep.**
-
 ## Overview
 
 ### The challenge
 
 Users should be able to:
 
-- See all countries from the API on the homepage
-- Search for a country using an `input` field
-- Filter countries by region
-- Click on a country to see more detailed information on a separate page
-- Click through to the border countries on the detail page
-- Toggle the color scheme between light and dark mode *(optional)*
+- View all countries fetched from the REST Countries API
+- Search for a country using a keyword input
+- Filter countries based on regions (e.g., Africa, Asia)
+- View detailed information of a selected country on a separate page
+- Explore bordering countries by clicking on their names in the detail view
+- Toggle between dark and light themes (optional feature)
 
 ### Screenshot
 
 ![](./screenshot.jpg)
 
-Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
-
-Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it. 
-
-Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
-
-**Note: Delete this note and the paragraphs above when you add your screenshot. If you prefer not to add a screenshot, feel free to remove this entire section.**
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [https://your-live-site-url.com](http://127.0.0.1:5500/project_5/Country_part_1/Country_part_2/index.html)
 
 ## My process
 
 ### Built with
 
-- Semantic HTML5 markup
-- CSS custom properties
-- Flexbox
-- CSS Grid
-- Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
-
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
+- HTML5
+- CSS3
+- JavaScript (ES6+)
+- [REST Countries API](https://restcountries.com/)
+- Responsive Design Principles
+- Theme toggling using CSS variables
+- LocalStorage for persisting theme state
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+This project helped me understand how to:
 
-To see how you can add code snippets, see below:
+- Fetch and manipulate API data dynamically
+- Handle asynchronous operations using `async/await`
+- Implement client-side routing/navigation
+- Use `localStorage` to persist user preferences (like dark mode)
+- Apply CSS custom properties for theme switching
+- Create reusable and modular code structure
 
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
 ```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
-}
-```
-
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
-
-**Note: Delete this note and the content within this section and replace with your own learnings.**
+const fetchCountries = async () => {
+  try {
+    const response = await fetch('https://restcountries.com/v3.1/all');
+    const data = await response.json();
+    displayCountries(data);
+  } catch (error) {
+    console.error('Error fetching countries:', error);
+  }
+};
+````
 
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
+In future iterations, I would like to:
 
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
+* Add animations for theme switching
+* Improve accessibility (ARIA roles and keyboard navigation)
+* Implement pagination for performance with large data
+* Migrate to a frontend framework like React or Vue
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
+* [REST Countries API Documentation](https://restcountries.com/) – for understanding API data structure.
+* [CSS-Tricks: Dark Mode](https://css-tricks.com/a-complete-guide-to-dark-mode-on-the-web/) – helped implement theme switching.
+* [MDN Web Docs](https://developer.mozilla.org/) – reference for JavaScript, CSS, and DOM operations.
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
-
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
+* GitHub – [sohammorchapure](https://github.com/sohammorchapure)
 
 ## Acknowledgments
 
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
+Thanks to Frontend Mentor for providing this project. Also, gratitude to online communities and dev articles that guided parts of this implementation.
 
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
+
+📝 **To use it**:
+1. Open `README-template.md` in your repo.
+2. Delete the existing content.
+3. Paste the above content.
+4. Save and commit:
+   ```bash
+   git add README-template.md
+   git commit -m "Updated README template with project details"
+   git push origin main
+
